@@ -13,8 +13,8 @@ new Vue({
         player_health_up: 25,
         console_log_text: [
             "Yeni mücadele başladı...",
-            "Kazanmaya bir adım daha yakınsın... Attak yaptın",
-            "Olamaz... canavar attak yaptı",
+            "Kazanmaya bir adım daha yakınsın... Atak yaptın",
+            "Olamaz... canavar atak yaptı",
             "Kendine can ekledin",
             "Rakip kazandı!!!",
             "Tebrikler sen kazandın!!!!"
