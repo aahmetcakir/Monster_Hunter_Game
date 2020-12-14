@@ -45,10 +45,10 @@
         <div class="small-12 columns">
             <ul v-for="(text,index) in console_log">
                 <li v-if="index%2==1" :style="[playerClass]">
-                    {{text}}  {{index}}
+                    {{text}}
                 </li>
                 <li v-if="index%2==0" :style="[monsterClass]">
-                    {{text}}  {{index}}
+                    {{text}}
                 </li>
             </ul>
         </div>
