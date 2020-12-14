@@ -30,7 +30,6 @@ new Vue({
         },
         attack: function () {
             this.player_attacked_point = Math.ceil(Math.random() * this.player_attack_power)
-            console.log("atak yaptın " + this.player_attacked_point)
             this.add_list(1)
             this.moster_attack()
             this.monster_heal -= this.player_attacked_point
@@ -38,14 +37,12 @@ new Vue({
         },
         special_attack: function () {
             this.player_attacked_point = Math.ceil(Math.random() * this.player_special_attack_power)
-            console.log("atak yaptın " + this.player_attacked_point)
             this.add_list(1)
             this.moster_attack()
             this.monster_heal -= this.player_attacked_point
             this.check_heal(this.monster_heal, this.player_heal)
         },
         health_up: function () {
-            console.log("canın yenilendi " + Math.ceil(Math.random() * this.player_health_up))
             this.add_list(3)
             this.moster_attack()
             this.player_heal += Math.ceil(Math.random() * this.player_health_up)
@@ -55,23 +52,19 @@ new Vue({
         give_up: function () {
             this.player_heal = 0
             this.add_list(4)
-            console.log("oyuncu yenildi canı : " + this.player_heal)
             this.end_game()
         },
         moster_attack: function () {
             this.moster_attacked_point = Math.ceil(Math.random() * this.moster_attack_power)
-            console.log("canavar atak yaptı " + this.moster_attacked_point)
             this.player_heal -= this.moster_attacked_point
             this.add_list(2)
         },
         end_game: function () {
-            console.log("oyun bitti oyuncunun canı: " + this.player_heal + " canavarın cani: " + this.monster_heal)
             this.start_game()
             this.clear_list()
         },
         check_heal: function (monster_heal, player_heal) {
             if (monster_heal <= 0) {
-                console.log("konstrol ettim dur")
                 this.add_list(5)
                 setTimeout(this.end_game, 2000)
             }
@@ -80,7 +73,6 @@ new Vue({
                 setTimeout(this.end_game, 2000)
             }
             else {
-                console.log("konstrol ettim devam")
                 return false
             }
         },
